@@ -306,3 +306,13 @@ a.link:hover {
   align-items: center;
 
 }
+span {
+  color: white;
+  font-size: .9rem;
+}
+footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 1.7rem;
+}
