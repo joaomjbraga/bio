@@ -40,7 +40,13 @@ body {
   line-height: 1.58;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
-  background-color: #0f0c0f;
+  /*
+  background-image: linear-gradient(40deg, #0f0c0f, purple);
+  */
+  background-image: url(https://w0.peakpx.com/wallpaper/441/570/HD-wallpaper-linux-purple-10k-linux-computer-deviantart.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  backdrop-filter: blur(50px);
   font-family: sans-serif;
   display: block;
 }
@@ -70,8 +76,13 @@ a:hover {
 
 .block {
   text-align: center;
-  background-color: #2d2f39;
+  background-color: #2d2f397a;
+  border-radius: 10px;
   padding: 30px;
+}
+.block::before {
+  content: "";
+  filter: blur(10px);
 }
 
 .profile {
@@ -180,10 +191,13 @@ a.link {
   cursor: pointer;
   text-decoration: none;
   display: block;
+  transition: background-color 600ms, box-shadow 600ms, color 600ms;
 }
 
 a.link:hover {
-  color: #3273dc;
+  background-color: #75205041;
+  box-shadow: 0px 0px 12px purple;
+  color: #ffffff;
 }
 
 .beacon {
