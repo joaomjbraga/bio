@@ -71,6 +71,9 @@ body {
   flex-direction: column;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  /* Parallax effect for background */
+  background-attachment: fixed;
+  background-size: cover;
 }
 
 img {
@@ -100,16 +103,18 @@ a {
 
 /* Cartão de perfil */
 .profile-card {
-  background-color: var(--zinc-900);
+  background: rgba(24, 24, 27, 0.85);
   border-radius: var(--radius-lg);
   overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  border: 1px solid var(--zinc-800);
-  backdrop-filter: blur(10px);
+  box-shadow: 0 12px 32px -8px rgba(34,197,94,0.10), 0 2px 8px -2px rgba(0,0,0,0.10);
+  border: 1.5px solid var(--zinc-800);
+  backdrop-filter: blur(18px) saturate(1.2);
+  -webkit-backdrop-filter: blur(18px) saturate(1.2);
+  transition: box-shadow 0.3s;
 }
 
 .profile-header {
-  padding: var(--space-xl) var(--space-lg);
+  padding: var(--space-xl) var(--space-lg) var(--space-md);
   text-align: center;
   position: relative;
 }
@@ -147,11 +152,17 @@ a {
 }
 
 .profile-header h1 {
-  font-size: 1.5rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 800;
   color: var(--zinc-50);
   margin-bottom: var(--space-xs);
   letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+.profile-header .highlight {
+  color: var(--lime-400);
+  font-weight: 700;
 }
 
 .location {
@@ -394,6 +405,12 @@ footer em {
   .link-content p {
     font-size: 0.8rem;
   }
+  
+  .email-row {
+    flex-direction: column;
+    gap: 0.2em;
+    font-size: 0.92rem;
+  }
 }
 
 @media (max-width: 320px) {
@@ -503,12 +520,13 @@ footer em {
   justify-content: space-between;
   padding: var(--space-lg);
   border-radius: var(--radius-md);
-  background: linear-gradient(135deg, var(--lime-600), var(--green-600));
+  background: linear-gradient(135deg, rgba(101,163,13,0.95), rgba(22,163,74,0.92));
   color: white;
   transition: all var(--transition-normal);
   position: relative;
   overflow: hidden;
-  box-shadow: 0 4px 15px -3px rgba(34, 197, 94, 0.3);
+  box-shadow: 0 4px 18px -3px rgba(34,197,94,0.25);
+  border: 1.5px solid rgba(255,255,255,0.08);
 }
 
 .featured-link::before {
@@ -558,8 +576,11 @@ footer em {
 }
 
 .featured-arrow {
-  font-size: 1.2rem;
-  color: rgba(255, 255, 255, 0.8);
+  font-size: 1.4rem;
+  color: #fff;
+  margin-left: var(--space-md);
+  display: flex;
+  align-items: center;
   transition: transform var(--transition-normal);
 }
 

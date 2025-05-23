@@ -21,10 +21,17 @@
     <section class="profile-card">
       <div class="profile-header">
         <img src="https://avatars.githubusercontent.com/u/195451083?v=4" alt="Foto de perfil de João M" class="profile-image" />
-        <h1>João M | Developer</h1>
+        <h1>João M <span class="highlight">| Developer</span></h1>
         <div class="location" aria-label="Localização">
           <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 
           <span>Jaguarari Bahia, Brasil</span>
+        </div>
+        <div class="email-row">
+          <span id="email-text">joaomjbraga@gmail.com</span>
+          <button class="copy-btn" aria-label="Copiar e-mail" onclick="copyEmail()">
+            <i class="fas fa-copy"></i>
+          </button>
+          <span id="copy-feedback" class="copy-feedback" aria-live="polite"></span>
         </div>
       </div>
       
@@ -37,7 +44,6 @@
       <div class="featured-link-container">
         <a href="https://blogjoaozinho.vercel.app/" class="featured-link" target="_blank" rel="noopener noreferrer" aria-label="Blog do Joãozinho - Acesse meu blog pessoal">
           <div class="featured-content">
-           
             <div class="featured-text">
               <h2>Blog do Joãozinho</h2>
               <p>Artigos, tutoriais e novidades sobre desenvolvimento e tecnologia</p>
@@ -61,7 +67,6 @@
             <i class="fas fa-arrow-right"></i>
           </div>
         </a>
-
         <a href="https://github.com/joomdeveloper" class="social-link github" target="_blank" rel="noopener noreferrer" aria-label="GitHub - perfil joomdeveloper">
           <div class="icon-wrapper">
             <img src="images/github.svg" alt="" aria-hidden="true" />
@@ -74,7 +79,6 @@
             <i class="fas fa-arrow-right"></i>
           </div>
         </a>
-
         <a href="https://www.instagram.com/joomdeveloper/" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram - perfil joaomjbraga">
           <div class="icon-wrapper">
             <img src="images/instagram.svg" alt="" aria-hidden="true" />
@@ -87,7 +91,6 @@
             <i class="fas fa-arrow-right"></i>
           </div>
         </a>
-
         <a href="#" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook - perfil joaomjbraga">
           <div class="icon-wrapper">
             <img src="images/icons8-facebook.svg" alt="" aria-hidden="true" />
@@ -106,6 +109,16 @@
   <footer>
     <p>&copy; 2025 Página desenvolvida por <em>João Marcos de Jesus Braga</em></p>
   </footer>
+  <script>
+    function copyEmail() {
+      const email = document.getElementById('email-text').textContent;
+      navigator.clipboard.writeText(email).then(() => {
+        const feedback = document.getElementById('copy-feedback');
+        feedback.textContent = 'Copiado!';
+        setTimeout(() => { feedback.textContent = ''; }, 1800);
+      });
+    }
+  </script>
 </body>
 
 </html>
