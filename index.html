@@ -3,102 +3,108 @@
 
 <head>
   <meta charset="utf-8" />
-  <meta httpEquiv="x-ua-compatible" content="ie=edge" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="shortcut icon" href="images/profile.jpg" type="image/x-icon">
-  <title>Links</title>
-  <meta name="description" content="Links to useful pages for my followers" />
+  <title>João M | Developer</title>
+  <meta name="description" content="Links para minhas redes sociais e projetos" />
   <script src="https://kit.fontawesome.com/9b3bbb804d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 
 
 <body>
-  <div class="outer">
-    <div class="content">
-      <div class="block">
-        <div class="profile">
-          <img src="https://avatars.githubusercontent.com/u/195451083?v=4" alt="profile photo" />
-          <h1>João M | Developer</h1>
-          <div class="location">
-            <i class="fas fa-map-marker-alt"></i> Jaguarari Bahia, Brasil
-          </div>
-          <div class="bio">
-            <div>💻 Apaixonado por Tecnologia</div>
-            <div>👨🏻‍🔬 Cursando <em>Análise e Desenvolvimento de Sistemas na UNIVERSIDADE ESTÁCIO DE SÁ - UNESA.</em></div>
-          </div>
+  <main class="container">
+    <section class="profile-card">
+      <div class="profile-header">
+        <img src="https://avatars.githubusercontent.com/u/195451083?v=4" alt="Foto de perfil de João M" class="profile-image" />
+        <h1>João M | Developer</h1>
+        <div class="location" aria-label="Localização">
+          <i class="fas fa-map-marker-alt" aria-hidden="true"></i> 
+          <span>Jaguarari Bahia, Brasil</span>
         </div>
-        <div class="links"></div>
       </div>
-
-      <a target="_blank" href="https://www.linkedin.com/in/joomdeveloper/" class="block link">
-        <div class="image-float linkedin">
-          <div class="beacon linkedin"></div>
-          <div class="image">
-            <img src="images/linkedin.svg" />
+      
+      <div class="bio">
+        <p><span aria-hidden="true">💻</span> Apaixonado por Tecnologia</p>
+        <p><span aria-hidden="true">👨🏻‍🔬</span> Cursando <em>Análise e Desenvolvimento de Sistemas - UNESA.</em></p>
+      </div>
+      
+      <!-- Link destacado do blog -->
+      <div class="featured-link-container">
+        <a href="https://blogjoaozinho.vercel.app/" class="featured-link" target="_blank" rel="noopener noreferrer" aria-label="Blog do Joãozinho - Acesse meu blog pessoal">
+          <div class="featured-content">
+           
+            <div class="featured-text">
+              <h2>Blog do Joãozinho</h2>
+              <p>Artigos, tutoriais e novidades sobre desenvolvimento e tecnologia</p>
+            </div>
           </div>
-        </div>
-        <div>
-          <h2>LinkedIn</h2>
-          <div>in/joomdeveloper</div>
-        </div>
-        <div class="arrow">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-      </a>
-
-      <a target="_blank" href="https://github.com/joomdeveloper" class="block link">
-        <div class="image-float github">
-          <div class="github"></div>
-          <div class="image">
-            <img src="images/github.svg" />
+          <div class="featured-arrow">
+            <i class="fas fa-arrow-right" aria-hidden="true"></i>
           </div>
-        </div>
-        <div>
-          <h2>GitHub</h2>
-          <div>github/joomdeveloper</div>
-        </div>
-        <div class="arrow">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-      </a>
-
-      <a target="_blank" href="https://www.instagram.com/joomdeveloper/" class="block link">
-        <div class="image-float instagram">
-          <div class="instagram"></div>
-          <div class="image">
-            <img src="images/instagram.svg" />
+        </a>
+      </div>      
+      <div class="social-links">
+        <a href="https://www.linkedin.com/in/joomdeveloper/" class="social-link linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn - perfil joomdeveloper">
+          <div class="icon-wrapper">
+            <img src="images/linkedin.svg" alt="" aria-hidden="true" />
           </div>
-        </div>
-        <div>
-          <h2>Instagram</h2>
-          <div>insta@joaomjbraga</div>
-        </div>
-        <div class="arrow">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-      </a>
-
-      <a target="_blank" href="#" class="block link">
-        <div class="image-float facebook">
-          <div class="facebook"></div>
-          <div class="image">
-            <img src="images/icons8-facebook.svg" />
+          <div class="link-content">
+            <h2>LinkedIn</h2>
+            <p>in/joomdeveloper</p>
           </div>
-        </div>
-        <div>
-          <h2>Facebook</h2>
-          <div>Face/joaomjbraga</div>
-        </div>
-        <div class="arrow">
-          <i class="fas fa-arrow-right"></i>
-        </div>
-      </a>
+          <div class="arrow" aria-hidden="true">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </a>
 
-    </div>
-  </div>
+        <a href="https://github.com/joomdeveloper" class="social-link github" target="_blank" rel="noopener noreferrer" aria-label="GitHub - perfil joomdeveloper">
+          <div class="icon-wrapper">
+            <img src="images/github.svg" alt="" aria-hidden="true" />
+          </div>
+          <div class="link-content">
+            <h2>GitHub</h2>
+            <p>github/joomdeveloper</p>
+          </div>
+          <div class="arrow" aria-hidden="true">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <a href="https://www.instagram.com/joomdeveloper/" class="social-link instagram" target="_blank" rel="noopener noreferrer" aria-label="Instagram - perfil joaomjbraga">
+          <div class="icon-wrapper">
+            <img src="images/instagram.svg" alt="" aria-hidden="true" />
+          </div>
+          <div class="link-content">
+            <h2>Instagram</h2>
+            <p>insta@joaomjbraga</p>
+          </div>
+          <div class="arrow" aria-hidden="true">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </a>
+
+        <a href="#" class="social-link facebook" target="_blank" rel="noopener noreferrer" aria-label="Facebook - perfil joaomjbraga">
+          <div class="icon-wrapper">
+            <img src="images/icons8-facebook.svg" alt="" aria-hidden="true" />
+          </div>
+          <div class="link-content">
+            <h2>Facebook</h2>
+            <p>Face/joaomjbraga</p>
+          </div>
+          <div class="arrow" aria-hidden="true">
+            <i class="fas fa-arrow-right"></i>
+          </div>
+        </a>
+      </div>
+    </section>
+  </main>
   <footer>
-    <span>&COPY; 2025 Página desenvolvida por <em>João Marcos de Jesus Braga</em></span>
+    <p>&copy; 2025 Página desenvolvida por <em>João Marcos de Jesus Braga</em></p>
   </footer>
 </body>
 
